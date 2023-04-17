@@ -1,4 +1,11 @@
 \documentclass[conference]{IEEEtran}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,
+    urlcolor=blue
+}
 \begin{document}
 \title{CSE342: Statistical Machine Learning Report}
 
@@ -28,4 +35,32 @@
     The report briefly describes the problem statement, the data set provided, and the different pre-processing steps taken to prepare the given data for analysis. It then outlines the various machine learning algorithms tested during the project, including the respective results, observations, and evaluation metrics. 
     The report concludes with a summary of the project and provides relevant references. Overall, the report serves as a comprehensive summary of the project, presenting the application of various machine learning algorithms.
 \end{abstract}
+\begin{IEEEkeywords}
+    PCA, LDA, logistic regression, voting classifier, cross validation, hyperparameter tuning, agglomerative clustering, meanshift clustering, DBSCAN clustering
+\end{IEEEkeywords}
+
+% Introduction section
+\section{Introduction}
+    The problem is a fruit classification problem where a fruit is to be classified into one of 20 class labels.
+    The aim of the project was to build a machine learning model to classify a fruit into one of 20 fruit labels. The dataset consists of 1216 samples, where each is classified into any label. The dataset and the competition is hosted on Kaggle [1]. 
+
+% Dimensionality reduction section
+\section{Dimensionality Reduction}
+\subsection{Principal Component Analysis}
+    The large number of features in the data set made it critical to perform \textit{principal component analysis}[2][3] on the given data set to reduce the number of features. It is implemented to reduce the number of features while retaining the maximum amount of information. \textit{Elbow method} and \textit{k-fold cross validation} was implemented to determine the optimal number of principal components. \textit{Elbow method} determined the optimal number of components to be 91 components, however, that resulted in a poor accuracy of around 74\%. 
+    The \textit{k-fold cross validation} found the optimal number of components to be around 415 components, which resulted in a better accuracy of about 80\%.
+    Due to higher accuracy, the number of components was set to 415 for the rest of the project.
+\subsection{Linear Discriminant Analysis}
+    \textit{Linear discriminant analysis}[4][5] was also performed on the data set to reduce the number of features. It is implemented to maximize the separation between the classes. The range of the number of components for the project was 1 to 19 since the data set had 20 classes. \textit{Elbow method} and \textit{k-fold cross validation} was implemented to determine the optimal number of principal components. \textit{Elbow method} determined the optimal number of components to be 16 components, however, that resulted in a poor accuracy of around 76\%. 
+    The \textit{k-fold cross validation} found the optimal number of components to be around 19 components, which resulted in a better accuracy of about 81\%.
+    Due to higher accuracy, the number of components was set to 19 for the rest of the project.
+
+%  References section
+\section{References}
+    [1] \href{https://www.kaggle.com/competitions/sml-project/overview}{Kaggle Competition} \\ \relax
+    & [2] \href{https://en.wikipedia.org/wiki/Principal_component_analysis}{Principal Component Analysis} \\ \relax
+    [3] \href{https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html}{PCA in Scikit-learn} \\ \relax
+    [4] \href{https://en.wikipedia.org/wiki/Linear_discriminant_analysis}{Linear Discriminant Analysis} \\ \relax
+    [5] \href{https://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html}{LDA in Scikit-learn} \\ \relax
 \end{document}
+
