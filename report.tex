@@ -44,6 +44,11 @@
     The problem is a fruit classification problem where a fruit is to be classified into one of 20 class labels.
     The aim of the project was to build a machine learning model to classify a fruit into one of 20 fruit labels. The dataset consists of 1216 samples, where each is classified into any label. The dataset and the competition is hosted on Kaggle [1]. 
 
+% Outlier detection section
+\section{Outlier Detection}
+    The data set was checked for outliers by implementing the \textit{Local Outlier Factor} algorithm. The hyperparameter for the number of neighbours in the \textit{Local Outlier Factor} was set to 4 after performing \textit{k-fold cross validation} on the training data set. 
+    The algorithm found 3 outliers in the data set and the outliers were removed from the training data set. When the \textit{Local Outlier Factor} algorithm was implemented along with the other algorithms mentioned in this report, the validation accuracy of the model was found to increase from 85.5\% to 85.99\%. 
+
 % Dimensionality reduction section
 \section{Dimensionality Reduction}
 \subsection{Principal Component Analysis}
@@ -54,6 +59,8 @@
     \textit{Linear discriminant analysis}[4][5] was also performed on the data set to reduce the number of features. It is implemented to maximize the separation between the classes. The range of the number of components for the project was 1 to 19 since the data set had 20 classes. \textit{Elbow method} and \textit{k-fold cross validation} was implemented to determine the optimal number of principal components. \textit{Elbow method} determined the optimal number of components to be 16 components, however, that resulted in a poor accuracy of around 76\%. 
     The \textit{k-fold cross validation} found the optimal number of components to be around 19 components, which resulted in a better accuracy of about 81\%.
     Due to higher accuracy, the number of components was set to 19 for the rest of the project.
+
+
 
 %  References section
 \section{References}
