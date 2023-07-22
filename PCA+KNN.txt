@@ -1,1 +1,0 @@
-K = 1, validation_size = 0.2, random_state = 42, max_accuracy = 0.6557377049180327, number_of_components = 119
