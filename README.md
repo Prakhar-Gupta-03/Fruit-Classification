@@ -1,4 +1,4 @@
-# SML_Project
+# Fruit Classification
 
 ## Project Description
 This project was done as a part of the [Kaggle competition](https://www.kaggle.com/competitions/sml-project/) for the project as a part of the course Statistical Machine Learning (CSE342) at IIIT Delhi. The project was done by a team of two members - [Prakhar Gupta](https://github.com/Prakhar-Gupta-03) and [Shreyas Kabra](https://github.com/shreyas21563). 
